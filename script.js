@@ -18,6 +18,7 @@ for (let index = 0; index < encodedStr.length; index++) {
 	let asci=encodedStr.charCodeAt(index);
 	let finalasci=asci+13;
 	decodedArr[i]=String.fromCharCode(finalasci);
+	i++;
 }
   return decodedArr;//return decodedArr
 }
