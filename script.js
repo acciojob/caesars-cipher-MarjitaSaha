@@ -18,7 +18,7 @@ for (let index = 0; index < encodedStr.length; index++) {
 	// let asci=encodedStr.charCodeAt(index);
 	// let finalasci=asci+13;
 	// decodedArr[i]=String.fromCharCode(finalasci);
-	if (lookup[encodedStr[index]]==undefined) {
+	if (lookup[encodedStr[index]]===undefined) {
 		decodedArr[i]=encodedStr[index];
 	} else {
 	  decodedArr[i]=lookup[encodedStr[index]];
