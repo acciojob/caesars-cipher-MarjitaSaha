@@ -13,11 +13,16 @@ const lookup = {
 function rot13(encodedStr){
    let decodedArr = []; // Your Result goes here
   // Only change code below this line
-	let i=0;
+let i=0;
 for (let index = 0; index < encodedStr.length; index++) {
-	let asci=encodedStr.charCodeAt(index);
-	let finalasci=asci+13;
-	decodedArr[i]=String.fromCharCode(finalasci);
+	// let asci=encodedStr.charCodeAt(index);
+	// let finalasci=asci+13;
+	// decodedArr[i]=String.fromCharCode(finalasci);
+	if (lookup[encodedStr[index]]==undefined) {
+		decodedArr[i]=encodedStr[index];
+	} else {
+	  decodedArr[i]=lookup[encodedStr[index]];
+	}
 	i++;
 }
   return decodedArr;//return decodedArr
