@@ -20,7 +20,7 @@ for (let index = 0; index < encodedStr.length; index++) {
 	if (lookup[encodedStr[index]]===undefined) {
 		decodedArr.push(encodedStr[index]);
 	} else {
-	  decodedArr[i].push(lookup[encodedStr[index]]);
+	  decodedArr.push(lookup[encodedStr[index]]);
 	}
 	//i++;
 }
