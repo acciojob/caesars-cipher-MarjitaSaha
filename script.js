@@ -24,13 +24,13 @@ function rot13(encodedStr){
 // 	}
 // 	//i++;
 // }
-	let decoderArr = [];
+	let decodedArr = [];
     for(let i = 0 ; i < encodedStr.length ; i++) {
         if(lookup[ encodedStr[i] ] === undefined){
-            decoderArr.push( encodedStr[i] ) ;
+            decodedArr.push( encodedStr[i] ) ;
         }   
         else{ 
-            decoderArr.push(lookup[ encodedStr[i] ]);
+            decodedArr.push(lookup[ encodedStr[i] ]);
         }
     }
     //return decoderArr
