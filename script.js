@@ -11,19 +11,29 @@ const lookup = {
 };
 
 function rot13(encodedStr){
-   let decodedArr = []; // Your Result goes here
+   //let decodedArr = []; // Your Result goes here
   // Only change code below this line
-for (let index = 0; index < encodedStr.length; index++) {
-	// let asci=encodedStr.charCodeAt(index);
-	// let finalasci=asci+13;
-	// decodedArr[i]=String.fromCharCode(finalasci);
-	if (lookup[encodedStr[index]]===undefined) {
-		decodedArr.push(encodedStr[index]);
-	} else {
-	  decodedArr.push(lookup[encodedStr[index]]);
-	}
-	//i++;
-}
+// for (let index = 0; index < encodedStr.length; index++) {
+// 	// let asci=encodedStr.charCodeAt(index);
+// 	// let finalasci=asci+13;
+// 	// decodedArr[i]=String.fromCharCode(finalasci);
+// 	if (lookup[encodedStr[index]]===undefined) {
+// 		decodedArr.push(encodedStr[index]);
+// 	} else {
+// 	  decodedArr.push(lookup[encodedStr[index]]);
+// 	}
+// 	//i++;
+// }
+	let decoderArr = [];
+    for(let i = 0 ; i < encodedStr.length ; i++) {
+        if(lookup[ encodedStr[i] ] === undefined){
+            decoderArr.push( encodedStr[i] ) ;
+        }   
+        else{ 
+            decoderArr.push(lookup[ encodedStr[i] ]);
+        }
+    }
+    //return decoderArr
   return decodedArr;//return decodedArr
 }
 
